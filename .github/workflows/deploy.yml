@@ -48,7 +48,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build-backend
     environment:
-      name: mtbitious-heroku
+      name: mtbitious
       url: https://mtbitious.herokuapp.com/
     env:
       HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
@@ -57,7 +57,7 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: mtbitious.jar
-          path: backend/mtbitious
+          path: backend/target
       - name: Login to heroku
         run: heroku container:login
       - name: Push docker container
