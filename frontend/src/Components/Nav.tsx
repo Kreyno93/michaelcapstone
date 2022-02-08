@@ -5,7 +5,7 @@ export default function Nav () {
 return (
     <nav className="Nav">
         <h3>
-            LOGO
+            <img src="../Logo/MTBLogo.png" alt="MTBLogo"/>
         </h3>
         <ul>
             <li><a href = "/Home">Home</a></li>
