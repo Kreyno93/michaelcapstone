@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="10dbceed-0483-4704-b224-44853558a724" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +17,8 @@
       <list>
         <option value="TypeScript JSX File" />
         <option value="Class" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -56,7 +55,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="openjdk-17" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DominicFullStackProject/fullstacktest1337" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/Components/List" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
@@ -68,11 +68,18 @@
     <property name="ts.external.directory.path" value="D:\IdeaProjects\michaelcapstone\frontend\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\michaelcapstone\frontend\src\Components\List" />
+      <recent name="D:\IdeaProjects\michaelcapstone\frontend\src\Components\PlaceDetails" />
+      <recent name="D:\IdeaProjects\michaelcapstone\frontend\src\Components\Map" />
+      <recent name="D:\IdeaProjects\michaelcapstone\frontend\src\Components\Header" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\michaelcapstone\frontend\src\Components\Nav" />
+      <recent name="D:\IdeaProjects\michaelcapstone\frontend\src\Components\Login" />
+      <recent name="D:\IdeaProjects\michaelcapstone\frontend\src\Components\Header" />
+      <recent name="D:\IdeaProjects\michaelcapstone\frontend\src\Components\Map" />
       <recent name="C:\Users\strik\IdeaProjects\michaelcapstone\frontend" />
-      <recent name="C:\Users\strik\IdeaProjects\michaelcapstone" />
-      <recent name="C:\Users\strik\IdeaProjects\michaelcapstone\frontend\src" />
-      <recent name="C:\Users\strik\IdeaProjects\michaelcapstone\frontend\src\Styles" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="de.michaelw.backend.Services" />
@@ -130,7 +137,8 @@
       <workItem from="1644201880686" duration="1265000" />
       <workItem from="1644249552492" duration="811000" />
       <workItem from="1644250446414" duration="2252000" />
-      <workItem from="1644317750108" duration="213000" />
+      <workItem from="1644317750108" duration="6966000" />
+      <workItem from="1644327743517" duration="598000" />
     </task>
     <servers />
   </component>

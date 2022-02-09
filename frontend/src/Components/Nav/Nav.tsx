@@ -1,6 +1,5 @@
-import "../Styles/Nav.scss"
-import LoginComponent from "./LoginComponent";
-import LoginButton from "./LoginButton";
+import "../../Styles/Nav.scss"
+import LoginComponent from "../Login/LoginComponent";
 export default function Nav () {
 return (
     <nav className="Nav">
@@ -15,7 +14,6 @@ return (
         </ul>
         <div className={"Login"}>
         <LoginComponent/>
-            <LoginButton/>
         </div>
     </nav>
 )

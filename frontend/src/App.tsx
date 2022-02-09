@@ -1,15 +1,27 @@
 import React from 'react';
-import './App.css';
-import GoogleMapComp from "./Components/GoogleMapComp";
-import MainPage from "./Pages/MainPage";
+
+import {CssBaseline, Grid} from "@material-ui/core";
+import Header from "./Components/Header/Header";
+import Map from "./Components/Map/Map";
+import List from "./Components/List/List";
 
 
 function App() {
     return (
-        <div>
-            <MainPage/>
-            <GoogleMapComp/>
-        </div>
+
+        <>
+            <CssBaseline/>
+            <Header/>
+            <Grid container spacing={3} style={{width: "100%"}}>
+                <Grid item xs={12} md={4}>
+                    <List/>
+                </Grid>
+
+                <Grid item xs={12} md={8}>
+                    <Map/>
+                </Grid>
+            </Grid>
+        </>
     )
 }
 
