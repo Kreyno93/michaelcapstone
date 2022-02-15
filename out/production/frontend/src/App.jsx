@@ -5,6 +5,8 @@ import Header from "./Components/Header/Header";
 import Map from "./Components/Map/Map";
 import List from "./Components/List/List";
 import {getPlacesData} from "./Services/API_Service";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+
 function App() {
 
     const [places, setPlaces] = useState([])

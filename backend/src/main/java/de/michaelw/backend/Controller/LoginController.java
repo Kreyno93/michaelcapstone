@@ -30,9 +30,9 @@ public class LoginController {
     public String login(@RequestBody LoginData loginData){
         try{
             final UsernamePasswordAuthenticationToken token =
-                    new UsernamePasswordAuthenticationToken(loginData.getUsername(), loginData.getPassword());
+                    new UsernamePasswordAuthenticationToken(loginData.getName(), loginData.getPassword());
             authenticationManager.authenticate(token);
-            return jwtUtils.createToken(new HashMap<>(), loginData.getUsername());
+            return jwtUtils.createToken(new HashMap<>(), loginData.getName());
         }catch (AuthenticationException e){
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "invalid credentials!");
         }

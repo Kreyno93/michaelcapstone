@@ -1,7 +1,7 @@
 package de.michaelw.backend.Services;
 
 import de.michaelw.backend.Models.UserMongo;
-import de.michaelw.backend.Models.UserRepository;
+import de.michaelw.backend.Models.MTBUserRepo;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -13,9 +13,9 @@ public class MongoUserDetailsService implements UserDetailsService {
 
     public static final String AUTHORITY_API_READWRITE = "API_READWRITE";
 
-    private final UserRepository repository;
+    private final MTBUserRepo repository;
 
-    public MongoUserDetailsService(UserRepository repository) {
+    public MongoUserDetailsService(MTBUserRepo repository) {
         this.repository = repository;
     }
 

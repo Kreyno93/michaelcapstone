@@ -11,7 +11,7 @@ export const getPlacesData = async () => {
             params: {lat: '40.058629', lon: '-82.650012'},
             headers: {
                 'x-rapidapi-host': 'trailapi-trailapi.p.rapidapi.com',
-                'x-rapidapi-key': process.env.REACT_APP_RAPIDAPI_TRAILAPI_KEY
+                'x-rapidapi-key': '9f0c9071f5msh93a5e5a214720f8p114823jsn40a80d6e19b5' // need to Set an env variable!!!
             }
         });
         return data;

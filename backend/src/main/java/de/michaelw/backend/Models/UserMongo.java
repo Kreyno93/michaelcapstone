@@ -25,8 +25,6 @@ public class UserMongo implements UserDetails {
 
     String username;
     String password;
-    String mail;
-    String role;
 
 
     public Collection<? extends GrantedAuthority> authorities;
