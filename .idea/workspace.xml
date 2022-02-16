@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10dbceed-0483-4704-b224-44853558a724" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/de/michaelw/backend/BackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/de/michaelw/backend/BackendApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/de/michaelw/backend/Controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/de/michaelw/backend/Controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/de/michaelw/backend/Models/LoginData.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/de/michaelw/backend/Models/LoginData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/de/michaelw/backend/Models/UserMongo.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/de/michaelw/backend/Models/UserMongo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/de/michaelw/backend/Models/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/de/michaelw/backend/Models/MTBUserRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/de/michaelw/backend/Services/MongoUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/de/michaelw/backend/Services/MongoUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +161,9 @@
       <workItem from="1644690428305" duration="7365000" />
       <workItem from="1644700256575" duration="1876000" />
       <workItem from="1644885944301" duration="11174000" />
-      <workItem from="1644916037493" duration="10552000" />
+      <workItem from="1644916037493" duration="15717000" />
+      <workItem from="1644995767950" duration="1508000" />
+      <workItem from="1645002945093" duration="7945000" />
     </task>
     <servers />
   </component>

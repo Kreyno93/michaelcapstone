@@ -4,13 +4,13 @@ import LocationOnOutLinedIcon from "@material-ui/icons/LocationOnOutlined";
 import Rating from "@material-ui/lab/Rating";
 import useStyles from "./styles";
 import mapStyles from "./mapStyles"
-export default function Map({setCoordinates, setBounds,places}){
+
+
+export default function Map({setCoordinates,coordinates,places}){
 
     const classes = useStyles();
 
     const isDesktop = useMediaQuery("(min-width:600px)");
-
-    const coordinates = {lat :40.058629, lng : -82.650012 }
 
     return (
         <div style={{ height: '90vh', width: '100%' }}>
@@ -23,13 +23,11 @@ export default function Map({setCoordinates, setBounds,places}){
                 options={{disableDefaultUI: true, zoomControl: true, styles:mapStyles}}
                 onChange={(e) =>{
                     console.log(e)
-                    setCoordinates({lat: e.center.lat,lng: e.center.lng})
-                    setBounds({ne: e.marginBounds.ne, sw: e.marginBounds.sw})
+                    setCoordinates({lat: e.center.lat,lon: e.center.lng})
                 } }
-                // onChildClick={}
             >
                 {places?.map((place,i) => (
-                    <div classeName={classes.markerContainer}
+                    <div className={classes.markerContainer}
                     lat={Number(place.lat)}
                     lng={Number(place.lon)}
                     key={i}>
