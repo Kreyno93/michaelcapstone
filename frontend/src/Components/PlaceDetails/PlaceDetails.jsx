@@ -1,11 +1,21 @@
 import {Box, Typography, Button, Card, CardMedia, CardContent, CardActions} from "@material-ui/core";
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import Rating from '@material-ui/lab/Rating';
-import useStyles from "./styles"
+import useStyles from "./styles";
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import {pink} from "@mui/material/colors";
+import {postFav} from "../../Services/ToBackendService";
 
 export default function PlaceDetails({place}) {
 
     const classes = useStyles();
+
+    const addToFav = (place) =>  {
+        const trackId = place.id;
+        postFav(trackId)
+            .then(console.log("After Axios", place.id))
+            .catch(error => console.error(error))
+    }
 
     return (
         <Card elevation = {6}>
@@ -38,6 +48,7 @@ export default function PlaceDetails({place}) {
                         Website
                     </Button>
                 </CardActions>
+                <Button onClick={() => addToFav(place)}><FavoriteIcon sx={{ color: pink[500] }} /> </Button>
             </CardContent>
         </Card>
     )
