@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-
 import {CssBaseline, Grid} from "@material-ui/core";
 import Header from "./Components/Header/Header";
 import Map from "./Components/Map/Map";

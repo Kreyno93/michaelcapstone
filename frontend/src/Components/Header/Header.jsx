@@ -10,6 +10,7 @@ export default function Header ({setCoordinates}) {
     const [autoComplete, setAutoComplete] = useState(null);
     const onLoad= (autoC) => setAutoComplete(autoC)
 
+
     const onPlaceChanged = () => {
         const lat = autoComplete.getPlace().geometry.location.lat();
         const lng = autoComplete.getPlace().geometry.location.lng();
