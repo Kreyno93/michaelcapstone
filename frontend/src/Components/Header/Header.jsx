@@ -2,7 +2,6 @@ import {Toolbar, Typography, InputBase, Box, AppBar} from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import useStyles from "./styles";
 import LoginComponent from "../Login/LoginComponent";
-import {useState} from "react";
 
 export default function Header () {
     const classes = useStyles();
