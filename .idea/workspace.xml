@@ -64,7 +64,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="ts.external.directory.path" value="D:\IdeaProjects\michaelcapstone\frontend\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -164,7 +164,7 @@
       <workItem from="1644995767950" duration="1508000" />
       <workItem from="1645002945093" duration="10976000" />
       <workItem from="1645022577125" duration="3324000" />
-      <workItem from="1645093092465" duration="1985000" />
+      <workItem from="1645093092465" duration="3948000" />
     </task>
     <servers />
   </component>
