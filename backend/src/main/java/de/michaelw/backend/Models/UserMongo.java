@@ -7,6 +7,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 @Data
@@ -18,6 +19,7 @@ public class UserMongo implements UserDetails {
         this.username = username;
         this.password = password;
         this.authorities = authorities;
+        this.trails = new ArrayList<>();
     }
 
     @Id
@@ -25,7 +27,7 @@ public class UserMongo implements UserDetails {
 
     String username;
     String password;
-
+    ArrayList<trailData> trails;
 
     public Collection<? extends GrantedAuthority> authorities;
 
@@ -33,4 +35,8 @@ public class UserMongo implements UserDetails {
     public boolean isAccountNonLocked= true;
     public boolean isCredentialsNonExpired= true;
     public boolean isEnabled= true;
+
+    public void addToList(trailData trackId) {
+        trails.add(trackId);
+    }
 }
