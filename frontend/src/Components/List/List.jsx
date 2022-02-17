@@ -1,6 +1,5 @@
 import {Grid, Typography} from "@material-ui/core"
 import useStyles from "./styles"
-import {useState} from "react";
 import PlaceDetails from "../PlaceDetails/PlaceDetails";
 
 
