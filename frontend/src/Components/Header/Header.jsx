@@ -4,17 +4,17 @@ import useStyles from "./styles";
 import LoginComponent from "../Login/LoginComponent";
 import {useState} from "react";
 
-export default function Header ({setCoordinates}) {
+export default function Header () {
     const classes = useStyles();
-    const [autoComplete, setAutoComplete] = useState(null);
-    const onLoad= (autoC) => setAutoComplete(autoC)
-
-
-    const onPlaceChanged = () => {
-        const lat = autoComplete.getPlace().geometry.location.lat();
-        const lng = autoComplete.getPlace().geometry.location.lng();
-        setCoordinates({lat,lng})
-    }
+    // const [autoComplete, setAutoComplete] = useState(null);
+    // const onLoad= (autoC) => setAutoComplete(autoC)
+    //
+    //
+    // const onPlaceChanged = () => {
+    //     const lat = autoComplete.getPlace().geometry.location.lat();
+    //     const lng = autoComplete.getPlace().geometry.location.lng();
+    //     setCoordinates({lat,lng})
+    // }
     return(
         <AppBar position={"static"}>
             <Toolbar className={classes.toolbar}>
