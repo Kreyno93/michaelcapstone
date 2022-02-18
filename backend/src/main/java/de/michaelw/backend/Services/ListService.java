@@ -16,11 +16,15 @@ public class ListService {
     public void postToList(TrailData trackId, UserMongo dummyUser) {
         UserMongo userMongo = mtbUserRepo.findByUsername(dummyUser.getUsername());
 
-        if(userMongo==null){
+        if (userMongo == null) {
             throw new IllegalStateException("User not found in Database: " + dummyUser);
         }
-        userMongo.addToList(trackId);
-        mtbUserRepo.save(userMongo);
+        if (userMongo.getTrails().contains(trackId)) {
+            System.out.println("-------------" + trackId + "already exists -------------");
+        } else {
+            userMongo.addToList(trackId);
+            mtbUserRepo.save(userMongo);
+        }
 
     }
 }
