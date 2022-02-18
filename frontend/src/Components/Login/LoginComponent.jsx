@@ -10,6 +10,7 @@ export default function LoginComponent() {
 
     const [userName, setUserName] = useState("");
     const [userPassword, setUserPassword] = useState("");
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
 
 
     const login = () => {
@@ -17,26 +18,30 @@ export default function LoginComponent() {
         postLogin(login)
             .then(response => localStorage.setItem(TOKEN_STORAGE_KEY, response.data))
             .catch(error => console.error(error))
+        setIsLoggedIn(true);
     }
 
     return (
-        <div className="login">
-        <Box
-            component="form"
-            sx={{
-                '& > :not(style)': {m: 1, width: '25ch'},
-            }}
-            noValidate
-            autoComplete="off"
-        >
-            <TextField id="usernameform" label="Username" variant="filled" value={userName}
-            onChange={(e) => setUserName(e.target.value)}/>
-            <TextField id="passwordform" label="Password" variant="filled" value = {userPassword}
-            onChange={(e) => setUserPassword(e.target.value)}/>
-        </Box>
-            <Stack>
-                <Button variant="text" onClick={() => login()}>Login</Button>
-            </Stack>
-        </div>
+            isLoggedIn ? (
+                    <div className="isLoggedIn">Hello {userName}</div>
+                ) :
+                <div className="login">
+                    <Box
+                        component="form"
+                        sx={{
+                            '& > :not(style)': {m: 1, width: '25ch'},
+                        }}
+                        noValidate
+                        autoComplete="off"
+                    >
+                        <TextField id="usernameform" label="Username" variant="filled" value={userName}
+                                   onChange={(e) => setUserName(e.target.value)}/>
+                        <TextField id="passwordform" label="Password" variant="filled" value={userPassword}
+                                   onChange={(e) => setUserPassword(e.target.value)}/>
+                    </Box>
+                    <Stack>
+                        <Button variant="text" onClick={() => login()}>Login</Button>
+                    </Stack>
+                </div>
 )
 }

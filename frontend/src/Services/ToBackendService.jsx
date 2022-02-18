@@ -5,6 +5,6 @@ const config = {headers: {'Authorization': 'Bearer ' + localStorage.getItem(TOKE
 
 export const postLogin = (login) => axios.post("/auth/login", login)
 
-export const postFav = (trackId) => axios.post("/api/fav",trackId, config )
+export const postFav = (trackId) => axios.post("/api/fav", {trackId},config )
 
 
