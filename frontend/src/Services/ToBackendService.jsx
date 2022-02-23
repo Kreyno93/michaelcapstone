@@ -8,4 +8,4 @@ export const postLogin = (login) => axios.post("/auth/login", login)
 
 export const postFav = (trackId) => axios.post("/api/fav", {trackId}, config)
 
-export const getFavList = ()  => axios.get("/api/get/fav",config)
+export const getFavList = ()  => axios.get("/api/get/fav",config).then(console.log())

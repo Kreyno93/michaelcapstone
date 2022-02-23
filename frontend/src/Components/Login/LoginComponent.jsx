@@ -4,8 +4,9 @@ import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import {useState} from "react";
-import "./style.scss"
-import {postLogin, TOKEN_STORAGE_KEY} from "../../Services/ToBackendService";
+import {getFavList, postLogin, TOKEN_STORAGE_KEY} from "../../Services/ToBackendService";
+
+
 export default function LoginComponent() {
 
     const [userName, setUserName] = useState("");
@@ -23,7 +24,9 @@ export default function LoginComponent() {
 
     return (
             isLoggedIn ? (
-                    <div className="isLoggedIn">Hello {userName}</div>
+                    <div className="isLoggedIn">
+                        <h1>Hello <a href="/profilepage">{userName}</a> </h1>
+                    </div>
                 ) :
                 <div className="login">
                     <Box
@@ -36,7 +39,7 @@ export default function LoginComponent() {
                     >
                         <TextField id="usernameform" label="Username" variant="filled" value={userName}
                                    onChange={(e) => setUserName(e.target.value)}/>
-                        <TextField id="passwordform" label="Password" variant="filled" value={userPassword}
+                        <TextField id="passwordform" label="Password" variant="filled" value={userPassword} type="password"
                                    onChange={(e) => setUserPassword(e.target.value)}/>
                     </Box>
                     <Stack>

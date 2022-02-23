@@ -31,8 +31,8 @@ public class BackendApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        String encoded = passwordEncoder.encode("test123");
-        UserMongo testUser = new UserMongo("test", encoded, List.of(new SimpleGrantedAuthority(MongoUserDetailsService.AUTHORITY_API_READWRITE)));
+        String encoded = passwordEncoder.encode("1234");
+        UserMongo testUser = new UserMongo("Solaire", encoded, List.of(new SimpleGrantedAuthority(MongoUserDetailsService.AUTHORITY_API_READWRITE)));
 
         if (mtbRepo.findByUsername(testUser.getUsername())==null) {
             mtbRepo.insert(testUser);

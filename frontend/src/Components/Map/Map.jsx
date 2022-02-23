@@ -29,9 +29,9 @@ export default function Map({setCoordinates, coordinates, places}) {
             <div className={classes.mapContainer}>
                 <GoogleMapReact
                     bootstrapURLKeys={{key: "AIzaSyBrFhIje5bWMTdQ-hdKkgxuGCuAeIebthE"}}
-                    defaultCenter={{lat:49.30619240029662, lng: 10.557889121921962}}
+                    defaultCenter={{lat:48.55053023488654, lng: 10.030220150375044}}
                     center={coordinates}
-                    defaultZoom={14}
+                    defaultZoom={11}
                     margin={[50, 50, 50, 50]}
                     options={{disableDefaultUI: true, zoomControl: true, styles: mapStyles}}
                     onChange={(e) => {
