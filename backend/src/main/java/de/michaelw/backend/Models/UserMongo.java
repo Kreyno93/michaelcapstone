@@ -27,7 +27,7 @@ public class UserMongo implements UserDetails {
 
     String username;
     String password;
-    ArrayList<trailData> trails;
+    ArrayList<TrailData> trails;
 
     public Collection<? extends GrantedAuthority> authorities;
 
@@ -36,7 +36,7 @@ public class UserMongo implements UserDetails {
     public boolean isCredentialsNonExpired= true;
     public boolean isEnabled= true;
 
-    public void addToList(trailData trackId) {
+    public void addToList(TrailData trackId) {
         trails.add(trackId);
     }
 }

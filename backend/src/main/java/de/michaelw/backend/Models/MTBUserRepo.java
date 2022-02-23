@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface MTBUserRepo extends MongoRepository<UserMongo, String> {
     UserMongo findByUsername(String username);
-    UserMongo getUserMongosById(String id);
+    UserMongo getUserMongoById(String id);
 }

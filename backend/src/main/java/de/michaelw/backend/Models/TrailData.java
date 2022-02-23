@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class trailData {
-   Number trackId;
+public class TrailData {
+   Integer trackId;
 }
