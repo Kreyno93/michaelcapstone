@@ -13,7 +13,7 @@ import java.util.Map;
 @Component
 public class JWTUtils {
 
-    final private String secret = "theCakeIsALie!";
+    final private String secret = "Praise The Sun";
 
     public String createToken(Map<String, Object> claims, String subject){
         return Jwts.builder()

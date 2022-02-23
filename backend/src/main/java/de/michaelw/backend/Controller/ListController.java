@@ -4,15 +4,16 @@ import de.michaelw.backend.Models.TrailData;
 import de.michaelw.backend.Models.UserMongo;
 import de.michaelw.backend.Services.ListService;
 import lombok.AllArgsConstructor;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
 
 @AllArgsConstructor
 @RestController
 @RequestMapping("/api")
+
 public class ListController {
 
     final ListService service;
@@ -23,4 +24,11 @@ public class ListController {
         UserMongo dummyUser = (UserMongo) authToken.getPrincipal();
         service.postToList(trackId, dummyUser);
     }
+
+    @GetMapping("/get/fav")
+    public ArrayList<TrailData> getFavList(UsernamePasswordAuthenticationToken authToken){
+        UserMongo dummyUser = (UserMongo) authToken.getPrincipal();
+        return service.getFavList(dummyUser);
+    }
+
 }

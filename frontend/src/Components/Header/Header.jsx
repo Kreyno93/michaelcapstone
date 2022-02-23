@@ -4,16 +4,9 @@ import useStyles from "./styles";
 import LoginComponent from "../Login/LoginComponent";
 
 export default function Header () {
+
     const classes = useStyles();
-    // const [autoComplete, setAutoComplete] = useState(null);
-    // const onLoad= (autoC) => setAutoComplete(autoC)
-    //
-    //
-    // const onPlaceChanged = () => {
-    //     const lat = autoComplete.getPlace().geometry.location.lat();
-    //     const lng = autoComplete.getPlace().geometry.location.lng();
-    //     setCoordinates({lat,lng})
-    // }
+
     return(
         <AppBar position={"static"}>
             <Toolbar className={classes.toolbar}>
@@ -24,14 +17,12 @@ export default function Header () {
                     <Typography variant="h6" className={classes.title}>
                         New Places
                     </Typography>
-                    {/*<Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>*/}
                         <div className={classes.search}>
                             <div className={classes.searchIcon}>
                                 <SearchIcon/>
                             </div>
                             <InputBase placeholder="Search..." classes={{root: classes.inputRoot, input: classes.inputInput}}></InputBase>
                         </div>
-                    {/*</Autocomplete>*/}
                 </Box>
                 <Box>
                     <LoginComponent/>
@@ -40,3 +31,4 @@ export default function Header () {
         </AppBar>
     )
 }
+

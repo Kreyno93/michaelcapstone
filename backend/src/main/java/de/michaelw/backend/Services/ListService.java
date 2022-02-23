@@ -6,6 +6,8 @@ import de.michaelw.backend.Models.TrailData;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+
 @AllArgsConstructor
 @Service
 
@@ -27,4 +29,11 @@ public class ListService {
         }
 
     }
+
+    public ArrayList<TrailData> getFavList(UserMongo dummyUser){
+        UserMongo userMongo = mtbUserRepo.getUserMongoById(dummyUser.getUsername());
+        System.out.println(userMongo.getTrails());
+        return userMongo.getTrails();
+    }
+
 }

@@ -6,8 +6,6 @@ import PlaceDetails from "../PlaceDetails/PlaceDetails";
 const List = ({places}) => {
 
     const classes = useStyles();
-    // const [type, setType] = useState("");
-    // const [rating, setRating] = useState("")
 
 
     return(
