@@ -1,5 +1,6 @@
 package de.michaelw.backend.Services;
 
+import de.michaelw.backend.Models.FavData;
 import de.michaelw.backend.Models.MTBUserRepo;
 import de.michaelw.backend.Models.UserMongo;
 import de.michaelw.backend.Models.TrailData;
@@ -31,9 +32,20 @@ public class ListService {
     }
 
     public ArrayList<TrailData> getFavList(UserMongo dummyUser){
-        UserMongo userMongo = mtbUserRepo.getUserMongoById(dummyUser.getUsername());
+        UserMongo userMongo = mtbUserRepo.getUserMongoById(dummyUser.getId());
         System.out.println(userMongo.getTrails());
         return userMongo.getTrails();
+    }
+
+    public void addRatingToList(FavData favData, UserMongo tempUser){
+        UserMongo userMongo = mtbUserRepo.getUserMongoById(tempUser.getId());
+        if (userMongo == null) {
+            throw new IllegalStateException("User not found in Database: " + tempUser);
+        }
+        if (userMongo.getTrails().contains(favData.getTrackId())) {
+            System.out.println(userMongo.getTrails().get(userMongo.getTrails().indexOf(favData.getTrackId())));
+
+        }
     }
 
 }

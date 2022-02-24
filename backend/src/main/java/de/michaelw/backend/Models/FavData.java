@@ -5,11 +5,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
-
-public class TrailData {
-   Object place;
+@Data
+public class FavData {
+    int trackId;
+    Number rating;
 }

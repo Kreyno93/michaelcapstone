@@ -1,5 +1,6 @@
 package de.michaelw.backend.Controller;
 
+import de.michaelw.backend.Models.FavData;
 import de.michaelw.backend.Models.TrailData;
 import de.michaelw.backend.Models.UserMongo;
 import de.michaelw.backend.Services.ListService;
@@ -31,4 +32,9 @@ public class ListController {
         return service.getFavList(dummyUser);
     }
 
+    @PostMapping("/get/fav/rating")
+    public void addRatingToList(@RequestBody FavData favData,UsernamePasswordAuthenticationToken authToken){
+        UserMongo tempUser = (UserMongo) authToken.getPrincipal();
+        service.addRatingToList(favData, tempUser);
+    }
 }

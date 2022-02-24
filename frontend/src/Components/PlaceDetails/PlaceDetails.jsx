@@ -12,21 +12,22 @@ export default function PlaceDetails({place}) {
 
     const classes = useStyles();
 
-    const addToFav = (place) =>  {
-        const trackId = place.id;
-        postFav(trackId)
-            .then(console.log("After Axios", place.id))
+    const addToFav = ({place}) =>  {
+        postFav({place})
+            .then(console.log("After Axios", place))
             .catch(error => console.error(error))
     }
 
     const [anchorEl, setAnchorEl] = useState(null);
 
     const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
+        setAnchorEl(event.currentTarget)
+        addToFav({place});
     };
 
     const handleClose = () => {
         setAnchorEl(null);
+
     };
 
     const open = Boolean(anchorEl);
@@ -49,10 +50,6 @@ export default function PlaceDetails({place}) {
                     <Typography variant="subtitle1">Description <br/> {place.description} </Typography>
                 </Box>
                 <br/>
-                {/*<Box display="flex" justifyContent="space-between">*/}
-                {/*    <Typography variant="subtitle1">Ranking</Typography>*/}
-                {/*    <Typography gutterBottom variant="subtitle1">{place.rating}</Typography>*/}
-                {/*</Box>*/}
                 {place?.region &&(
                     <Typography gutterBottom variant="subtitle2" color="textSecondary" className={classes.subtitle}>
                         <LocationOnIcon /> {place.city}, {place.region}
@@ -77,7 +74,7 @@ export default function PlaceDetails({place}) {
                             horizontal: 'left',
                         }}
                     >
-                        <Typography sx={{ p: 2 }}>Added to Favourite</Typography>
+                        <Typography sx={{ p: 2 }}>Added to Favorite</Typography>
                     </Popover>
                 </div>
                 {/*<Button onClick={() => addToFav(place)}><FavoriteIcon sx={{ color: pink[500] }} /> </Button>*/}

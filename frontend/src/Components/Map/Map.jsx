@@ -1,5 +1,5 @@
 import GoogleMapReact from 'google-map-react';
-import {Paper, Typography, useMediaQuery} from "@mui/material";
+import {Paper, Typography} from "@mui/material";
 import LocationOnOutLinedIcon from "@material-ui/icons/LocationOnOutlined";
 import Rating from "@material-ui/lab/Rating";
 import useStyles from "./styles";
