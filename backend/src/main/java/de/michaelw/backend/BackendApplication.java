@@ -17,25 +17,9 @@ import java.util.List;
 @EnableMongoRepositories(basePackageClasses = MTBUserRepo.class)
 @SpringBootApplication
 
-public class BackendApplication implements CommandLineRunner {
-
-    @Autowired
-    private MTBUserRepo mtbRepo;
-
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+public class BackendApplication{
 
     public static void main(String[] args) {
         SpringApplication.run(BackendApplication.class, args);
-    }
-
-    @Override
-    public void run(String... args) throws Exception {
-        String encoded = passwordEncoder.encode("1234");
-        UserMongo testUser = new UserMongo("Solaire", encoded, List.of(new SimpleGrantedAuthority(MongoUserDetailsService.AUTHORITY_API_READWRITE)));
-
-        if (mtbRepo.findByUsername(testUser.getUsername())==null) {
-            mtbRepo.insert(testUser);
-        }
     }
 }

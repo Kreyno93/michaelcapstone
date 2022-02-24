@@ -13,7 +13,8 @@ export default function PlaceDetails({place}) {
     const classes = useStyles();
 
     const addToFav = ({place}) =>  {
-        postFav({place})
+        console.log("Add To Fav : ",place)
+        postFav({place,trackId:place.id})
             .then(console.log("After Axios", place))
             .catch(error => console.error(error))
     }

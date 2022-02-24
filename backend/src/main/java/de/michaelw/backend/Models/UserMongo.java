@@ -7,8 +7,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.ArrayList;
-import java.util.Collection;
+import java.util.*;
 
 @Data
 @NoArgsConstructor
@@ -19,7 +18,7 @@ public class UserMongo implements UserDetails {
         this.username = username;
         this.password = password;
         this.authorities = authorities;
-        this.trails = new ArrayList<>();
+        this.trails = new HashSet<>();
     }
 
     @Id
@@ -27,7 +26,8 @@ public class UserMongo implements UserDetails {
 
     String username;
     String password;
-    ArrayList<TrailData> trails;
+    Set<TrailData> trails;
+
 
     public Collection<? extends GrantedAuthority> authorities;
 

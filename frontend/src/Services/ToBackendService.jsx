@@ -6,8 +6,8 @@ const config = {headers: {'Authorization': 'Bearer ' + localStorage.getItem(TOKE
 
 export const postLogin = (login) => axios.post("/auth/login", login)
 
-export const postFav = ({place}) => axios.post("/api/fav", {place}, config)
+export const postFav = ({place,trackId}) => axios.post("/api/fav", {place,trackId}, config)
 
-export const getFavList = ()  => axios.get("/api/get/fav",config).then(response => response.data)
+export const getFavList = ()  => axios.get("/api/fav",config).then(response => response.data)
 
-export const addRating = ({trackId,rating}) => axios.post("/api/get/fav/rating", {trackId,rating},config)
+export const addRating = ({trackId,rating}) => axios.post("/api/fav/rating", {trackId,rating},config)
