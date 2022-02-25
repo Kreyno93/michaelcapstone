@@ -3,6 +3,7 @@ package de.michaelw.backend.Services;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.time.Duration;
@@ -13,7 +14,8 @@ import java.util.Map;
 @Component
 public class JWTUtils {
 
-    final private String secret = "PraiseTheSun";
+    @Value(value = "${SECRET_KEY}")
+    private String secret;
 
     public String createToken(Map<String, Object> claims, String subject) {
         return Jwts.builder()
