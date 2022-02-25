@@ -13,15 +13,6 @@ export default function Header() {
                     MTBitious
                 </Typography>
                 <Box display="flex">
-                    {/*<Typography variant="h6" className={classes.title}>*/}
-                    {/*    New Places*/}
-                    {/*</Typography>*/}
-                    {/*    <div className={classes.search}>*/}
-                    {/*        <div className={classes.searchIcon}>*/}
-                    {/*            <SearchIcon/>*/}
-                    {/*        </div>*/}
-                    {/*        <InputBase placeholder="Search..." classes={{root: classes.inputRoot, input: classes.inputInput}}></InputBase>*/}
-                    {/*    </div>*/}
                 </Box>
                 <Box>
                     <LoginComponent/>
