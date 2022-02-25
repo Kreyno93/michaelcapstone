@@ -13,7 +13,6 @@ export default function ProfilePage() {
 
     const classes = useStyles();
     const [userList, setUserList] = useState([])
-    const [value, setValue] = useState(0)
 
     useEffect(() => {
 
