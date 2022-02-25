@@ -36,10 +36,8 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             final String username = jwtUtils.extractUserName(token);
             if ((username != null)
             && (SecurityContextHolder.getContext().getAuthentication() == null)) {
-                //Lade User aus DB
                 final UserDetails userDetails = userService.loadUserByUsername(username);
                 if (jwtUtils.validateToken(token, userDetails.getUsername())){
-                    //Info an Spring, das Anmeldung korrekt ist!
                     final UsernamePasswordAuthenticationToken authToken =
                             new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                     authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));

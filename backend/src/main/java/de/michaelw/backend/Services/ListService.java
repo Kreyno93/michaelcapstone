@@ -42,7 +42,7 @@ public class ListService {
         userMongo.getTrails().stream()
                 .filter(favData::equals)
                 .findAny()
-                .orElseThrow(() -> new IllegalArgumentException("No Track found with ID " + favData.getTrackId()))
+                .orElseThrow(() -> new IllegalArgumentException("No Track found with ID : " + favData.getTrackId()))
                 .setRating(favData.getRating());
         mtbUserRepo.save(userMongo);
     }

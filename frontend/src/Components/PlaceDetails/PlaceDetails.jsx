@@ -78,7 +78,6 @@ export default function PlaceDetails({place}) {
                         <Typography sx={{ p: 2 }}>Added to Favorite</Typography>
                     </Popover>
                 </div>
-                {/*<Button onClick={() => addToFav(place)}><FavoriteIcon sx={{ color: pink[500] }} /> </Button>*/}
             </CardContent>
         </Card>
     )

@@ -13,7 +13,7 @@ export default function ProfilePage() {
 
     const classes = useStyles();
     const [userList, setUserList] = useState([])
-    const [value, setValue] = useState(0);
+    const [value, setValue] = useState(0)
 
     useEffect(() => {
 
@@ -63,9 +63,9 @@ export default function ProfilePage() {
                                         <Typography component="legend">Rating</Typography>
                                         <Rating
                                             name="simple-controlled"
-                                            value={value}
+                                            value={userListItem.rating}
                                             onChange={(event, newValue) => {
-                                                addRating({rating: newValue, trackId: userListItem.place.id})
+                                                addRating({trackId: userListItem.place.id,rating: newValue})
                                             }}
                                         />
                                     </Box>
