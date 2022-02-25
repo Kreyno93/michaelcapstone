@@ -1,53 +1,19 @@
-import React, {useEffect, useState} from 'react';
-import {CssBaseline, Grid} from "@material-ui/core";
-import Header from "./Components/Header/Header";
-import Map from "./Components/Map/Map";
-import List from "./Components/List/List";
-import {getPlacesData} from "./Services/API_Service";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import MainPage from "./Components/Pages/MainPage";
+import ProfilePage from "./Components/ProfilePage/ProfilePage";
 
 
 function App() {
 
 
-
-    const [places, setPlaces] = useState([])
-
-    const [coordinates, setCoordinates] = useState({})
-    // const [bounds, setBounds] = useState(nu
-
-    useEffect(() => {
-        navigator.geolocation.getCurrentPosition(({coords:{latitude,longitude}})=>{
-            setCoordinates({lat:latitude,lng:longitude});
-        })
-    },[]);
-
-    useEffect(() => {
-
-        getPlacesData(coordinates.lat,coordinates.lon)
-            .then((data) => {
-                setPlaces(data)
-                console.log("Orte in deiner Nähe", data)
-            })
-    }, [coordinates])
-
     return (
 
-                <>
-                    <CssBaseline/>
-                    <Header setCoordinates={setCoordinates}/>
-                    <Grid container spacing={3} style={{width: "100%"}}>
-                        <Grid item xs={12} md={4}>
-                            <List places={places}/>
-                        </Grid>
-                        <Grid item xs={12} md={8}>
-                            <Map
-                                setCoordinates={setCoordinates}
-                                coordinates={coordinates}
-                                places={places}
-                            />
-                        </Grid>
-                    </Grid>
-                </>
+        <BrowserRouter>
+            <Routes>
+                <Route path={"/"} element={<MainPage/>}/>
+                <Route path={"/profilepage"} element={<ProfilePage/>}/>
+            </Routes>
+        </BrowserRouter>
 
     )
 }

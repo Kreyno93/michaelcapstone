@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10dbceed-0483-4704-b224-44853558a724" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/de/michaelw/backend/Controller/ReactRoutingForwarding.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/de/michaelw/backend/Models/MTBUserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/de/michaelw/backend/Models/MTBUserRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/de/michaelw/backend/Services/ListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/de/michaelw/backend/Services/ListService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/de/michaelw/backend/Services/JWTUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/de/michaelw/backend/Services/JWTUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +21,7 @@
         <option value="TypeScript JSX File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -56,8 +58,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="openjdk-17" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/Components/List" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Abschlussevent/rem-java-21-5-abschluss" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -66,7 +70,8 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="org.intellij.sdk.settings.AppSettingsConfigurable" />
     <property name="ts.external.directory.path" value="D:\IdeaProjects\michaelcapstone\frontend\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -74,6 +79,7 @@
       <recent name="de.michaelw.backend.Models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\michaelcapstone\frontend\src\Components\ProfilePage" />
       <recent name="D:\IdeaProjects\michaelcapstone\frontend\src\Components\List" />
       <recent name="D:\IdeaProjects\michaelcapstone\frontend\src\Components\PlaceDetails" />
       <recent name="D:\IdeaProjects\michaelcapstone\frontend\src\Components\Map" />
@@ -85,6 +91,13 @@
       <recent name="D:\IdeaProjects\michaelcapstone\frontend\src\Components\Header" />
       <recent name="D:\IdeaProjects\michaelcapstone\frontend\src\Components\Map" />
       <recent name="C:\Users\strik\IdeaProjects\michaelcapstone\frontend" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="de.michaelw.backend.Services" />
+      <recent name="de.michaelw.backend.Models" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="de.michaelw.backend.Services" />
@@ -103,6 +116,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <envs>
         <env name="URI_MONGO" value="mongodb+srv://Kreyno93:AHArn4f.CH.ZWwNMAg%27e%27gDxWp@cluster0.1cieq.mongodb.net/MTBitiousDB?authSource=admin&amp;replicaSet=atlas-a0anom-shard-0&amp;readPreference=primary&amp;appname=MongoDB%20Compass&amp;ssl=true" />
+        <env name="secret" value="_E='.n@ÍÛ÷2/)j«ðû3Y," />
       </envs>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -189,7 +203,15 @@
       <workItem from="1645136939005" duration="238000" />
       <workItem from="1645181145414" duration="3152000" />
       <workItem from="1645190095886" duration="926000" />
-      <workItem from="1645195348035" duration="7553000" />
+      <workItem from="1645195348035" duration="9247000" />
+      <workItem from="1645446720052" duration="597000" />
+      <workItem from="1645456929194" duration="13673000" />
+      <workItem from="1645518757336" duration="116000" />
+      <workItem from="1645528661253" duration="595000" />
+      <workItem from="1645581187745" duration="22668000" />
+      <workItem from="1645623768022" duration="20759000" />
+      <workItem from="1645694662429" duration="19803000" />
+      <workItem from="1645783804584" duration="1300000" />
     </task>
     <servers />
   </component>
