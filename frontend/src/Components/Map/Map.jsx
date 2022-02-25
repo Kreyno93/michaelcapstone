@@ -10,7 +10,7 @@ export default function Map({setCoordinates, coordinates, places}) {
 
     const classes = useStyles();
 
-    const AnyReactComponent = ({placeThumbnail,placeName,placeRating}) =>
+    const AnyReactComponent = ({placeThumbnail, placeName, placeRating}) =>
         <div>
             <LocationOnOutLinedIcon color="primary" fontSize="large"/>
             <Paper elevation={3} className={classes.paper}>
@@ -25,31 +25,31 @@ export default function Map({setCoordinates, coordinates, places}) {
         </div>
 
 
-        return (
-            <div className={classes.mapContainer}>
-                <GoogleMapReact
-                    bootstrapURLKeys={{key: "AIzaSyBrFhIje5bWMTdQ-hdKkgxuGCuAeIebthE"}}
-                    defaultCenter={{lat:48.55053023488654, lng: 10.030220150375044}}
-                    center={coordinates}
-                    defaultZoom={11}
-                    margin={[50, 50, 50, 50]}
-                    options={{disableDefaultUI: true, zoomControl: true, styles: mapStyles}}
-                    onChange={(e) => {
-                        console.log(e)
-                        setCoordinates({lat: e.center.lat, lon: e.center.lng})
-                    }}
-                >
-                    {places?.map((place, i) => (
-                        <AnyReactComponent
-                            lat={Number(place.lat)}
-                            lng={Number(place.lon)}
-                            key={i}
-                            placeThumbnail={place.thumbnail}
-                            placeName = {place.name}
-                            placeRating = {place.rating}
-                        />
-                    ))}
-                </GoogleMapReact>
-            </div>
-        );
-    }
+    return (
+        <div className={classes.mapContainer}>
+            <GoogleMapReact
+                bootstrapURLKeys={{key: "AIzaSyBrFhIje5bWMTdQ-hdKkgxuGCuAeIebthE"}}
+                defaultCenter={{lat: 48.55053023488654, lng: 10.030220150375044}}
+                center={coordinates}
+                defaultZoom={11}
+                margin={[50, 50, 50, 50]}
+                options={{disableDefaultUI: true, zoomControl: true, styles: mapStyles}}
+                onChange={(e) => {
+                    console.log(e)
+                    setCoordinates({lat: e.center.lat, lon: e.center.lng})
+                }}
+            >
+                {places?.map((place, i) => (
+                    <AnyReactComponent
+                        lat={Number(place.lat)}
+                        lng={Number(place.lon)}
+                        key={i}
+                        placeThumbnail={place.thumbnail}
+                        placeName={place.name}
+                        placeRating={place.rating}
+                    />
+                ))}
+            </GoogleMapReact>
+        </div>
+    );
+}

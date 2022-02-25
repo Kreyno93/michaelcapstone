@@ -3,9 +3,9 @@ import axios from "axios";
 const URL = "https://trailapi-trailapi.p.rapidapi.com/trails/explore/"
 
 
-export const getPlacesData = async (lat,lon) => {
+export const getPlacesData = async (lat, lon) => {
     try {
-        const {data: {data}} = await axios.get(URL,{
+        const {data: {data}} = await axios.get(URL, {
 
             params: {lat, lon},
             headers: {
@@ -14,7 +14,7 @@ export const getPlacesData = async (lat,lon) => {
             }
         });
         return data;
-    }catch(error){
+    } catch (error) {
         console.log(error)
     }
 }

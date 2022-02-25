@@ -15,7 +15,7 @@ public class JWTUtils {
 
     final private String secret = "PraiseTheSun";
 
-    public String createToken(Map<String, Object> claims, String subject){
+    public String createToken(Map<String, Object> claims, String subject) {
         return Jwts.builder()
                 .setClaims(claims)
                 .setSubject(subject)
@@ -25,22 +25,22 @@ public class JWTUtils {
                 .compact();
     }
 
-    public String extractUserName(String token){
+    public String extractUserName(String token) {
         Claims claims = extractAllClaims(token);
         return claims.getSubject();
     }
 
-    public Boolean validateToken(String token, String username){
+    public Boolean validateToken(String token, String username) {
         String tokenName = extractUserName(token);
         return (tokenName.equals(username) && !isTokenExpired(token));
     }
 
-    public boolean isTokenExpired(String token){
+    public boolean isTokenExpired(String token) {
         Claims claims = extractAllClaims(token);
         return claims.getExpiration().before(new Date());
     }
 
-    private Claims extractAllClaims(String token){
+    private Claims extractAllClaims(String token) {
         return Jwts.parser().setSigningKey(secret)
                 .parseClaimsJws(token).getBody();
     }

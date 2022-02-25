@@ -1,5 +1,4 @@
-
-import {BrowserRouter, Routes,Route} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import MainPage from "./Components/Pages/MainPage";
 import ProfilePage from "./Components/ProfilePage/ProfilePage";
 

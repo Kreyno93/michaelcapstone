@@ -1,6 +1,6 @@
-export default interface LoginData{
+export default interface LoginData {
 
-    name:string;
-    password:string;
+    name: string;
+    password: string;
 
 }

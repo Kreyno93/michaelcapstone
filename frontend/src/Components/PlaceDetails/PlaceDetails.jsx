@@ -1,4 +1,4 @@
-import {Box, Typography, Button, Card, CardMedia, CardContent, CardActions} from "@material-ui/core";
+import {Box, Button, Card, CardActions, CardContent, CardMedia, Typography} from "@material-ui/core";
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import Rating from '@material-ui/lab/Rating';
 import useStyles from "./styles";
@@ -12,9 +12,9 @@ export default function PlaceDetails({place}) {
 
     const classes = useStyles();
 
-    const addToFav = ({place}) =>  {
-        console.log("Add To Fav : ",place)
-        postFav({place,trackId:place.id})
+    const addToFav = ({place}) => {
+        console.log("Add To Fav : ", place)
+        postFav({place, trackId: place.id})
             .then(console.log("After Axios", place))
             .catch(error => console.error(error))
     }
@@ -35,11 +35,11 @@ export default function PlaceDetails({place}) {
     const id = open ? 'simple-popover' : undefined;
 
     return (
-        <Card elevation = {6}>
+        <Card elevation={6}>
             <CardMedia
-            style = {{height: 350}}
-            image={place.thumbnail ? place.thumbnail:"https://www.ridemorebikes.com/wp-content/uploads/2011/07/whistler-bike-park-bline.jpg"}
-            title={place.name}
+                style={{height: 350}}
+                image={place.thumbnail ? place.thumbnail : "https://www.ridemorebikes.com/wp-content/uploads/2011/07/whistler-bike-park-bline.jpg"}
+                title={place.name}
             />
             <CardContent>
                 <Typography gutterBottom variant="h5">{place.name}</Typography>
@@ -51,11 +51,11 @@ export default function PlaceDetails({place}) {
                     <Typography variant="subtitle1">Description <br/> {place.description} </Typography>
                 </Box>
                 <br/>
-                {place?.region &&(
+                {place?.region && (
                     <Typography gutterBottom variant="subtitle2" color="textSecondary" className={classes.subtitle}>
-                        <LocationOnIcon /> {place.city}, {place.region}
+                        <LocationOnIcon/> {place.city}, {place.region}
                     </Typography>
-                    )}
+                )}
                 <CardActions>
                     <Button size="small" color="primary" onClick={() => window.open(place.url, "blank")}>
                         Website
@@ -63,7 +63,7 @@ export default function PlaceDetails({place}) {
                 </CardActions>
                 <div>
                     <Button aria-describedby={id} variant="contained" onClick={handleClick}>
-                        <FavoriteIcon sx={{ color: pink[500] }} />
+                        <FavoriteIcon sx={{color: pink[500]}}/>
                     </Button>
                     <Popover
                         id={id}
@@ -75,7 +75,7 @@ export default function PlaceDetails({place}) {
                             horizontal: 'left',
                         }}
                     >
-                        <Typography sx={{ p: 2 }}>Added to Favorite</Typography>
+                        <Typography sx={{p: 2}}>Added to Favorite</Typography>
                     </Popover>
                 </div>
             </CardContent>

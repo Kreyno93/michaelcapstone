@@ -47,7 +47,7 @@ export default function ProfilePage() {
                 <Grid container spacing={3} className={classes.list}>
                     <Grid item xs={6} md={6}>
                         {userList.map((userListItem, i) => (
-                            <Card  elevation={6} key={i}>
+                            <Card elevation={6} key={i}>
                                 <CardMedia
                                     style={{height: 350}}
                                     image={userListItem.place.thumbnail ? userListItem.place.thumbnail : "https://www.ridemorebikes.com/wp-content/uploads/2011/07/whistler-bike-park-bline.jpg"}
@@ -65,21 +65,25 @@ export default function ProfilePage() {
                                             name="simple-controlled"
                                             value={userListItem.rating}
                                             onChange={(event, newValue) => {
-                                                addRating({trackId: userListItem.place.id,rating: newValue})
+                                                addRating({trackId: userListItem.place.id, rating: newValue})
                                             }}
                                         />
                                     </Box>
                                     <br/>
                                     <Box display="flex" flex-direction="column" justifyContent="space-between">
-                                        <Typography variant="subtitle1">Description <br/>{userListItem.place.description}</Typography>
+                                        <Typography
+                                            variant="subtitle1">Description <br/>{userListItem.place.description}
+                                        </Typography>
                                     </Box>
                                     <br/>
                                     <Box display="flex" flex-direction="column" justifyContent="space-between">
-                                        <Typography variant="subtitle1">Direction <br/>{userListItem.place.direction}</Typography>
+                                        <Typography variant="subtitle1">Direction <br/>{userListItem.place.direction}
+                                        </Typography>
                                     </Box>
                                     <br/>
                                     <Box display="flex" justifyContent="space-between">
-                                        <Typography variant="subtitle1">Difficulty : {userListItem.place.difficulty}</Typography>
+                                        <Typography variant="subtitle1">Difficulty
+                                            : {userListItem.place.difficulty}</Typography>
                                         <Typography gutterBottom variant="subtitle1">5</Typography>
                                     </Box>
                                     <Typography gutterBottom variant="subtitle2" color="textSecondary"

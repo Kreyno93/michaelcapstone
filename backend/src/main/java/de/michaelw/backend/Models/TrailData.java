@@ -14,20 +14,20 @@ import java.util.Objects;
 @NoArgsConstructor
 
 public class TrailData {
-   @NonNull Integer trackId;
-   Object place;// Defined by Google
-   Integer rating;
+    @NonNull Integer trackId;
+    Object place;// Defined by Google
+    Integer rating;
 
-   @Override
-   public boolean equals(Object o) {
-      if (this == o) return true;
-      if (o == null || getClass() != o.getClass()) return false;
-      TrailData trailData = (TrailData) o;
-      return trackId.equals(trailData.trackId);
-   }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TrailData trailData = (TrailData) o;
+        return trackId.equals(trailData.trackId);
+    }
 
-   @Override
-   public int hashCode() {
-      return Objects.hash(trackId);
-   }
+    @Override
+    public int hashCode() {
+        return Objects.hash(trackId);
+    }
 }

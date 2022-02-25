@@ -1,8 +1,8 @@
 package de.michaelw.backend.Services;
 
 import de.michaelw.backend.Models.MTBUserRepo;
-import de.michaelw.backend.Models.UserMongo;
 import de.michaelw.backend.Models.TrailData;
+import de.michaelw.backend.Models.UserMongo;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

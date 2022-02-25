@@ -8,20 +8,19 @@ import {getPlacesData} from "../../Services/API_Service";
 export default function MainPage() {
 
 
-
     const [places, setPlaces] = useState([])
 
     const [coordinates, setCoordinates] = useState({})
 
     useEffect(() => {
-        navigator.geolocation.getCurrentPosition(({coords:{latitude,longitude}})=>{
-            setCoordinates({lat:latitude,lng:longitude});
+        navigator.geolocation.getCurrentPosition(({coords: {latitude, longitude}}) => {
+            setCoordinates({lat: latitude, lng: longitude});
         })
-    },[]);
+    }, []);
 
     useEffect(() => {
 
-        getPlacesData(coordinates.lat,coordinates.lon)
+        getPlacesData(coordinates.lat, coordinates.lon)
             .then((data) => {
                 setPlaces(data)
                 console.log("Orte in deiner Nähe", data)
